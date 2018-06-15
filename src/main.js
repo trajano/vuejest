@@ -13,3 +13,10 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+$(window).resize(() => {
+  $('#mainnav-nav').pushpin('remove')
+  $('#mainnav-nav').pushpin({
+    top: $('#mainnav').offset().top
+  })
+})
